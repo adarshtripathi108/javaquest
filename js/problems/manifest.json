@@ -1,0 +1,1490 @@
+[
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/01-print-hello-java.js",
+  "id": "01-01",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Print Hello Java",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/02-add-two-numbers.js",
+  "id": "01-02",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Add Two Numbers",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/03-greet-by-name.js",
+  "id": "01-03",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Greet By Name",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/04-celsius-to-fahrenheit.js",
+  "id": "01-04",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Celsius to Fahrenheit",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/05-print-star-pattern.js",
+  "id": "01-05",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Print Star Pattern",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/06-swap-two-numbers.js",
+  "id": "01-06",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Swap Two Numbers",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/07-simple-interest.js",
+  "id": "01-07",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Simple Interest",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/08-ascii-value-of-character.js",
+  "id": "01-08",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "ASCII Value of a Character",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/09-area-perimeter-rectangle.js",
+  "id": "01-09",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Area and Perimeter of Rectangle",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/10-type-casting-double-to-int.js",
+  "id": "01-10",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Type Casting: Double to Int",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/11-multiplication-table.js",
+  "id": "01-11",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Multiplication Table",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/01-introduction-to-java/12-compound-interest.js",
+  "id": "01-12",
+  "topicId": 1,
+  "topic": "Introduction to Java",
+  "title": "Compound Interest",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/01-even-or-odd.js",
+  "id": "02-01",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Even or Odd",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/02-maximum-of-two-numbers.js",
+  "id": "02-02",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Maximum of Two Numbers",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/03-positive-negative-zero.js",
+  "id": "02-03",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Positive, Negative or Zero",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/04-sum-of-first-n-natural-numbers.js",
+  "id": "02-04",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Sum of First N Natural Numbers",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/05-leap-year-check.js",
+  "id": "02-05",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Leap Year Check",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/06-reverse-a-number.js",
+  "id": "02-06",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Reverse a Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/07-palindrome-number.js",
+  "id": "02-07",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Palindrome Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/08-count-digits.js",
+  "id": "02-08",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Count Digits in a Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/09-sum-of-digits.js",
+  "id": "02-09",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Sum of Digits",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/10-power-of-a-number.js",
+  "id": "02-10",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Power of a Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/11-armstrong-number.js",
+  "id": "02-11",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "Armstrong Number",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/02-java-basics/12-gcd-of-two-numbers.js",
+  "id": "02-12",
+  "topicId": 2,
+  "topic": "Java Basics",
+  "title": "GCD of Two Numbers",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/01-grade-calculator.js",
+  "id": "03-01",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Grade Calculator",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/02-vowel-or-consonant.js",
+  "id": "03-02",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Vowel or Consonant",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/03-largest-of-three-numbers.js",
+  "id": "03-03",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Largest of Three Numbers",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/04-print-numbers-1-to-n.js",
+  "id": "03-04",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Print Numbers 1 to N",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/05-day-of-week.js",
+  "id": "03-05",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Day of the Week",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/06-fizzbuzz-check.js",
+  "id": "03-06",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "FizzBuzz Check",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/07-sum-of-even-numbers.js",
+  "id": "03-07",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Sum of Even Numbers up to N",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/08-factorial.js",
+  "id": "03-08",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Factorial of a Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/09-fibonacci-nth-term.js",
+  "id": "03-09",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Nth Fibonacci Number",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/10-prime-number-check.js",
+  "id": "03-10",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Prime Number Check",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/11-primes-up-to-n.js",
+  "id": "03-11",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Prime Numbers up to N",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/03-control-statements/12-number-triangle-pattern.js",
+  "id": "03-12",
+  "topicId": 3,
+  "topic": "Control Statements",
+  "title": "Number Triangle Pattern",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/01-find-largest-element.js",
+  "id": "04-01",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Find Largest Element",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/02-find-smallest-element.js",
+  "id": "04-02",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Find Smallest Element",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/03-sum-of-array-elements.js",
+  "id": "04-03",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Sum of Array Elements",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/04-linear-search.js",
+  "id": "04-04",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Linear Search",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/05-count-even-numbers.js",
+  "id": "04-05",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Count Even Numbers in Array",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/06-reverse-array.js",
+  "id": "04-06",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Reverse an Array",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/07-second-largest-element.js",
+  "id": "04-07",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Second Largest Element",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/08-check-array-sorted.js",
+  "id": "04-08",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Check if Array is Sorted",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/09-remove-duplicates-sorted-array.js",
+  "id": "04-09",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Remove Duplicates from Sorted Array",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/10-two-sum.js",
+  "id": "04-10",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Two Sum",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/11-missing-number.js",
+  "id": "04-11",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Find Missing Number",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/04-arrays/12-rotate-array-by-k.js",
+  "id": "04-12",
+  "topicId": 4,
+  "topic": "Arrays",
+  "title": "Rotate Array by K",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/01-create-a-student-class.js",
+  "id": "5-01",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Create a Student Class",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/02-rectangle-area-perimeter.js",
+  "id": "5-02",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Rectangle Area and Perimeter",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/03-bank-account-deposit.js",
+  "id": "5-03",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Bank Account Deposit",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/04-constructor-overloading.js",
+  "id": "5-04",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Constructor Overloading",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/05-count-objects-static.js",
+  "id": "5-05",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Count Objects with Static",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/06-this-keyword.js",
+  "id": "5-06",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Use of this Keyword",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/07-method-overloading-calculator.js",
+  "id": "5-07",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Method Overloading Calculator",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/08-encapsulation-employee.js",
+  "id": "5-08",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Encapsulation with Employee",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/09-copy-constructor.js",
+  "id": "5-09",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Copy Constructor",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/10-bigger-rectangle.js",
+  "id": "5-10",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Bigger Rectangle",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/11-singleton-pattern.js",
+  "id": "5-11",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Singleton Pattern",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/05-classes-objects/12-find-topper.js",
+  "id": "5-12",
+  "topicId": 5,
+  "topic": "Classes & Objects",
+  "title": "Find the Topper",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/01-animal-sound.js",
+  "id": "6-01",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Animal Sound Override",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/02-vehicle-car.js",
+  "id": "6-02",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Vehicle and Car",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/03-super-keyword.js",
+  "id": "6-03",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Super Keyword",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/04-inherited-method.js",
+  "id": "6-04",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Inherited Method",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/05-multilevel-inheritance.js",
+  "id": "6-05",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Multilevel Inheritance",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/06-method-overriding.js",
+  "id": "6-06",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Method Overriding",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/07-super-constructor.js",
+  "id": "6-07",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Super Constructor",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/08-hierarchical-inheritance.js",
+  "id": "6-08",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Hierarchical Inheritance",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/09-dynamic-method-dispatch.js",
+  "id": "6-09",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Dynamic Method Dispatch",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/10-instanceof-operator.js",
+  "id": "6-10",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Instanceof Operator",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/11-employee-payroll.js",
+  "id": "6-11",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Employee Payroll",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/06-inheritance/12-field-hiding-super-this.js",
+  "id": "6-12",
+  "topicId": 6,
+  "topic": "Inheritance",
+  "title": "Field Hiding with Super and This",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/01-abstract-shape-area.js",
+  "id": "7-01",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Abstract Shape Area",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/02-interface-vehicle.js",
+  "id": "7-02",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Vehicle Interface",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/03-multiple-interfaces.js",
+  "id": "7-03",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Multiple Interfaces",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/04-abstract-class-constructor.js",
+  "id": "7-04",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Abstract Class Constructor",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/05-interface-default-method.js",
+  "id": "7-05",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Interface Default Method",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/06-interface-polymorphism.js",
+  "id": "7-06",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Interface Polymorphism",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/07-abstract-bank-account.js",
+  "id": "7-07",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Abstract Bank Account",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/08-interface-constants.js",
+  "id": "7-08",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Interface Constants",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/09-abstract-template-method.js",
+  "id": "7-09",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Template Method Pattern",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/10-interface-static-method.js",
+  "id": "7-10",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Interface Static Method",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/11-payment-gateway-interface.js",
+  "id": "7-11",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Payment Gateway Interface",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/07-abstract-classes-packages-interfaces/12-default-method-conflict.js",
+  "id": "7-12",
+  "topicId": 7,
+  "topic": "Abstract Classes, Packages & Interfaces",
+  "title": "Default Method Conflict",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/01-reverse-a-string.js",
+  "id": "8-01",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Reverse a String",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/02-check-palindrome.js",
+  "id": "8-02",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Check Palindrome",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/03-count-vowels.js",
+  "id": "8-03",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Count Vowels",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/04-first-non-repeating-character.js",
+  "id": "8-04",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "First Non-Repeating Character",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/05-remove-duplicate-characters.js",
+  "id": "8-05",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Remove Duplicate Characters",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/06-check-anagram.js",
+  "id": "8-06",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Check Anagram",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/07-longest-common-prefix.js",
+  "id": "8-07",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Longest Common Prefix",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/08-string-compression.js",
+  "id": "8-08",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "String Compression",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/09-reverse-words-in-sentence.js",
+  "id": "8-09",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Reverse Words in a Sentence",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/10-reverse-each-word-stringbuffer.js",
+  "id": "8-10",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Reverse Each Word with StringBuffer",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/11-longest-palindromic-substring.js",
+  "id": "8-11",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Longest Palindromic Substring",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/js/problems/08-strings-string-stringbuilder-stringbuffer/12-minimum-window-substring.js",
+  "id": "8-12",
+  "topicId": 8,
+  "topic": "Strings",
+  "title": "Minimum Window Substring",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/09-exception-handling/01-safe-division.js",
+  "id": "9-01",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Safe Division",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/09-exception-handling/02-parse-integer-safely.js",
+  "id": "9-02",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Parse Integer Safely",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/09-exception-handling/03-safe-array-access.js",
+  "id": "9-03",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Safe Array Access",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/09-exception-handling/04-null-safe-string-length.js",
+  "id": "9-04",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Null-Safe String Length",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/09-exception-handling/05-finally-always-runs.js",
+  "id": "9-05",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Finally Always Runs",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/09-exception-handling/06-validate-age-custom-exception.js",
+  "id": "9-06",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Validate Age (Custom Exception)",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/09-exception-handling/07-multiple-catch-blocks.js",
+  "id": "9-07",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Multiple Catch Blocks",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/09-exception-handling/08-nested-try-catch-counter.js",
+  "id": "9-08",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Nested Try-Catch Counter",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/09-exception-handling/09-password-check-with-throws.js",
+  "id": "9-09",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Password Check with Throws",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/09-exception-handling/10-rethrow-with-context.js",
+  "id": "9-10",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Rethrow with Context",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/09-exception-handling/11-bank-withdrawal-custom-exceptions.js",
+  "id": "9-11",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Bank Withdrawal with Custom Exceptions",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/09-exception-handling/12-finally-return-override.js",
+  "id": "9-12",
+  "topicId": 9,
+  "topic": "Exception Handling",
+  "title": "Finally Return Override",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/10-multithreading/01-run-task-on-thread.js",
+  "id": "10-01",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Run a Task on a Thread",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/10-multithreading/02-runnable-task.js",
+  "id": "10-02",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Runnable Task",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/10-multithreading/03-sleep-and-wake.js",
+  "id": "10-03",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Sleep and Wake",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/10-multithreading/04-thread-name-priority.js",
+  "id": "10-04",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Thread Name and Priority",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/10-multithreading/05-parallel-sum-join.js",
+  "id": "10-05",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Parallel Sum with Join",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/10-multithreading/06-synchronized-counter.js",
+  "id": "10-06",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Synchronized Counter",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/10-multithreading/07-safe-list-synchronized-block.js",
+  "id": "10-07",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Safe List with Synchronized Block",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/10-multithreading/08-producer-consumer.js",
+  "id": "10-08",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Producer Consumer with wait notify",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/10-multithreading/09-daemon-thread-check.js",
+  "id": "10-09",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Daemon Thread Check",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/10-multithreading/10-executor-service-sum.js",
+  "id": "10-10",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "ExecutorService Sum",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/10-multithreading/11-deadlock-free-transfer.js",
+  "id": "10-11",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "Deadlock-Free Bank Transfer",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/10-multithreading/12-countdown-latch.js",
+  "id": "10-12",
+  "topicId": 10,
+  "topic": "Multithreading",
+  "title": "CountDownLatch Coordination",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/11-generics/01-generic-box.js",
+  "id": "11-01",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Box",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/11-generics/02-generic-first-element.js",
+  "id": "11-02",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic First Element",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/11-generics/03-generic-pair.js",
+  "id": "11-03",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Pair",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/11-generics/04-generic-join-array.js",
+  "id": "11-04",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Join Array",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/11-generics/05-bounded-sum.js",
+  "id": "11-05",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Bounded Type Sum",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/11-generics/06-generic-swap.js",
+  "id": "11-06",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Swap",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/11-generics/07-wildcard-sum.js",
+  "id": "11-07",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Wildcard Sum",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/11-generics/08-generic-stack.js",
+  "id": "11-08",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Stack",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/11-generics/09-generic-max-comparable.js",
+  "id": "11-09",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Max with Comparable",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/11-generics/10-generic-entry-to-string.js",
+  "id": "11-10",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Generic Entry to String",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/11-generics/11-wildcard-capture-swap.js",
+  "id": "11-11",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "Wildcard Capture Swap",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/11-generics/12-pecs-copy.js",
+  "id": "11-12",
+  "topicId": 11,
+  "topic": "Generics",
+  "title": "PECS Copy",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/12-collections-framework/01-count-word-frequency.js",
+  "id": "12-01",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Count Word Frequency",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/12-collections-framework/02-remove-duplicates.js",
+  "id": "12-02",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Remove Duplicates",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/12-collections-framework/03-most-frequent-element.js",
+  "id": "12-03",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Most Frequent Element",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/12-collections-framework/04-anagram-check.js",
+  "id": "12-04",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Anagram Check",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/12-collections-framework/05-first-non-repeating-character.js",
+  "id": "12-05",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "First Non-Repeating Character",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/12-collections-framework/06-group-anagrams.js",
+  "id": "12-06",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Group Anagrams",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/12-collections-framework/07-two-sum.js",
+  "id": "12-07",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Two Sum",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/12-collections-framework/08-lru-cache.js",
+  "id": "12-08",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "LRU Cache",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/12-collections-framework/09-sort-map-by-value.js",
+  "id": "12-09",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Sort Map by Value",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/12-collections-framework/10-top-k-frequent.js",
+  "id": "12-10",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Top K Frequent Elements",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/12-collections-framework/11-design-hashmap.js",
+  "id": "12-11",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Design HashMap",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/12-collections-framework/12-sliding-window-maximum.js",
+  "id": "12-12",
+  "topicId": 12,
+  "topic": "Collections Framework",
+  "title": "Sliding Window Maximum",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/01-copy-file-byte-stream.js",
+  "id": "13-01",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Copy File Using Byte Stream",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/02-count-lines-in-file.js",
+  "id": "13-02",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Count Lines in a File",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/03-write-text-file.js",
+  "id": "13-03",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Write Lines to a Text File",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/04-read-file-to-string.js",
+  "id": "13-04",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Read Entire File into a String",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/05-count-word-occurrences.js",
+  "id": "13-05",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Count Word Occurrences in a File",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/06-merge-two-files.js",
+  "id": "13-06",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Merge Two Files Line by Line",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/07-serialize-student-object.js",
+  "id": "13-07",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Serialize and Deserialize a Student Object",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/08-uppercase-file-copy.js",
+  "id": "13-08",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Copy File Converting Text to Uppercase",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/09-find-longest-line.js",
+  "id": "13-09",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Find the Longest Line in a File",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/10-split-file-into-halves.js",
+  "id": "13-10",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Split a File into Two Halves",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/11-serialize-list-of-objects.js",
+  "id": "13-11",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Serialize a List of Objects",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/13-io-streams-serialization/12-transient-field-demo.js",
+  "id": "13-12",
+  "topicId": 13,
+  "topic": "IO Streams & Serialization",
+  "title": "Transient Field in Serialization",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/01-establish-connection.js",
+  "id": "14-01",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Establish a JDBC Connection",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/02-create-table-students.js",
+  "id": "14-02",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Create a Students Table",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/03-insert-record-statement.js",
+  "id": "14-03",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Insert a Record Using Statement",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/04-fetch-all-students.js",
+  "id": "14-04",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Fetch All Student Names",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/05-count-rows.js",
+  "id": "14-05",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Count Rows in a Table",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/06-insert-with-preparedstatement.js",
+  "id": "14-06",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Insert Using PreparedStatement",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/07-search-student-by-id.js",
+  "id": "14-07",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Search Student by ID",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/08-update-marks.js",
+  "id": "14-08",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Update Student Marks",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/09-delete-student.js",
+  "id": "14-09",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Delete a Student Record",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/10-transaction-transfer-marks.js",
+  "id": "14-10",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Transfer Marks in a Transaction",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/11-batch-insert-students.js",
+  "id": "14-11",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Batch Insert Many Students",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/14-jdbc-connectivity/12-resultset-metadata-columns.js",
+  "id": "14-12",
+  "topicId": 14,
+  "topic": "JDBC Connectivity",
+  "title": "Read Column Info with ResultSetMetaData",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/01-iterate-and-print.js",
+  "id": "15-01",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Join List Elements with an Iterator",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/02-remove-even-numbers.js",
+  "id": "15-02",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Remove Even Numbers with Iterator",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/03-sort-strings-natural.js",
+  "id": "15-03",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Strings in Natural Order",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/04-sort-descending.js",
+  "id": "15-04",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Numbers in Descending Order",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/05-listiterator-reverse.js",
+  "id": "15-05",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Traverse a List Backwards with ListIterator",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/06-sort-students-by-marks.js",
+  "id": "15-06",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Students by Marks",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/07-sort-by-name-length.js",
+  "id": "15-07",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Strings by Length, Then Alphabetically",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/08-comparable-employee.js",
+  "id": "15-08",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Employees with Comparable",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/09-remove-duplicates-iterator.js",
+  "id": "15-09",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Remove Duplicates with Iterator and Set",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/10-sort-map-by-value.js",
+  "id": "15-10",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort a Map by Value",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/11-multi-level-sort-students.js",
+  "id": "15-11",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Multi-Level Sort of Students",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/15-iterators-comparators-sorting-collections/12-sort-by-vowel-count.js",
+  "id": "15-12",
+  "topicId": 15,
+  "topic": "Iterators, Comparators & Sorting Collections",
+  "title": "Sort Strings by Vowel Count",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/01-project-setup-book-class.js",
+  "id": "16-01",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 1: Project Setup and Book Class",
+  "difficulty": "Easy"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/02-add-search-books.js",
+  "id": "16-02",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 2: Add and Search Books",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/03-issue-return-file-persistence.js",
+  "id": "16-03",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 3: Issue, Return and File Persistence",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/04-jdbc-database-version.js",
+  "id": "16-04",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 4: JDBC Database Version",
+  "difficulty": "Medium"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/05-exception-handling-validation.js",
+  "id": "16-05",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 5: Exception Handling and Validation",
+  "difficulty": "Hard"
+ },
+ {
+  "path": "js/problems/16-mini-project-student-library-management-system/06-final-polish-readme-demo.js",
+  "id": "16-06",
+  "topicId": 16,
+  "topic": "Mini-Project: Student Library Management System",
+  "title": "Milestone 6: Final Polish, Menu App and README",
+  "difficulty": "Hard"
+ }
+]
