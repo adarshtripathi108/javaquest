@@ -1,0 +1,17 @@
+/* JavaQuest — Problem: Transient Field in Serialization (IO Streams & Serialization, Hard) */
+PROBLEMS.push({
+  id: '13-12',
+  topicId: 13,
+  topic: 'IO Streams & Serialization',
+  title: 'Transient Field in Serialization',
+  difficulty: 'Hard',
+  statement: '<p>Ek <code>Student</code> object me password field hai jo file me save NAHI hona chahiye. <code>transient</code> keyword ka use karke password ko serialization se bahar rakho, phir object ko save karke wapas padho.</p><p>Deserialized object me password ki value <code>null</code> hogi kyunki transient fields serialize nahi hote — unhe deserialization ke waqt default value milti hai. Yehi tareeka passwords jaise sensitive data ko bachane ka hai.</p>',
+  examples: [
+    { input: 'Student("Adarsh", 101, "secret123"), path = "student.ser"', output: 'Student{name=Adarsh, rollNo=101, password=null}', explanation: 'Name aur rollNo wapas mil jate hain, par transient password serialize nahi hua, isliye wapas padhne par null milta hai.' },
+    { input: 'Student("Meena", 102, "pass456"), path = "student.ser"', output: 'Student{name=Meena, rollNo=102, password=null}', explanation: 'Koi bhi password ho, transient field hamesha null wapas aata hai.' }
+  ],
+  constraints: ['Password field transient hona chahiye.', 'Baaki fields normal tarike se serialize honi chahiye.', 'Deserialized password hamesha null hota hai.'],
+  starter: 'import java.io.*;\n\nclass Solution {\n    static class Student implements Serializable {\n        private static final long serialVersionUID = 1L;\n        String name;\n        int rollNo;\n        transient String password;\n\n        Student(String name, int rollNo, String password) {\n            this.name = name;\n            this.rollNo = rollNo;\n            this.password = password;\n        }\n\n        public String toString() {\n            return "Student{name=" + name + ", rollNo=" + rollNo + ", password=" + password + "}";\n        }\n    }\n\n    public Student testTransient(Student s, String path) throws IOException, ClassNotFoundException {\n        // TODO: object save karo aur wapas padhkar return karo\n        return null;\n    }\n}',
+  solution: 'import java.io.*;\n\nclass Solution {\n    static class Student implements Serializable {\n        private static final long serialVersionUID = 1L;\n        String name;\n        int rollNo;\n        transient String password;\n\n        Student(String name, int rollNo, String password) {\n            this.name = name;\n            this.rollNo = rollNo;\n            this.password = password;\n        }\n\n        public String toString() {\n            return "Student{name=" + name + ", rollNo=" + rollNo + ", password=" + password + "}";\n        }\n    }\n\n    public Student testTransient(Student s, String path) throws IOException, ClassNotFoundException {\n        try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(path))) {\n            out.writeObject(s);\n        }\n        try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(path))) {\n            return (Student) in.readObject();\n        }\n    }\n}',
+  explanation: '<p><code>transient</code> likhte hi JVM us field ko serialization ke waqt skip kar deta hai. Deserialization ke waqt us field ko default value milti hai — String ke liye <code>null</code>. Sensitive fields ke liye ye standard practice hai.</p>'
+});
