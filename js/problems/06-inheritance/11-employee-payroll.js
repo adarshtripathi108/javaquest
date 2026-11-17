@@ -1,0 +1,17 @@
+/* JavaQuest — Problem: Employee Payroll (Inheritance, Hard) */
+PROBLEMS.push({
+  id: '6-11',
+  topicId: 6,
+  topic: 'Inheritance',
+  title: 'Employee Payroll',
+  difficulty: 'Hard',
+  statement: '<p>Ek <code>Employee</code> base class banao jisme <code>baseSalary</code> aur <code>getSalary()</code> method ho. <code>Manager</code> aur <code>Developer</code> classes Employee ko extend karke getSalary() ko override karein — dono base salary me apna bonus jod kar return karein. Method <code>totalPayroll</code> ko dono employees ki salary aur bonus milega — ek Employee array bana kar polymorphism se total salary return karni hai.</p>',
+  examples: [
+    { input: 'managerBase = 50000, managerBonus = 10000, devBase = 40000, devBonus = 5000', output: '105000', explanation: 'Manager 60000 + Developer 45000 = 105000.' },
+    { input: 'managerBase = 60000, managerBonus = 0, devBase = 30000, devBonus = 2000', output: '92000', explanation: 'Manager 60000 + Developer 32000 = 92000.' }
+  ],
+  constraints: ['saari values non-negative integers hongi'],
+  starter: 'class Solution {\n    class Employee {\n        int baseSalary;\n        Employee(int baseSalary) {\n            this.baseSalary = baseSalary;\n        }\n        int getSalary() {\n            return baseSalary;\n        }\n    }\n    class Manager extends Employee {\n        int bonus;\n        Manager(int baseSalary, int bonus) {\n            super(baseSalary);\n            this.bonus = bonus;\n        }\n        int getSalary() {\n            // TODO: baseSalary + bonus return karo\n            return 0;\n        }\n    }\n    class Developer extends Employee {\n        int bonus;\n        Developer(int baseSalary, int bonus) {\n            super(baseSalary);\n            this.bonus = bonus;\n        }\n        int getSalary() {\n            // TODO: baseSalary + bonus return karo\n            return 0;\n        }\n    }\n    int totalPayroll(int managerBase, int managerBonus, int devBase, int devBonus) {\n        // TODO: Employee array banao aur sabki salary ka total return karo\n        return 0;\n    }\n}',
+  solution: 'class Solution {\n    class Employee {\n        int baseSalary;\n        Employee(int baseSalary) {\n            this.baseSalary = baseSalary;\n        }\n        int getSalary() {\n            return baseSalary;\n        }\n    }\n    class Manager extends Employee {\n        int bonus;\n        Manager(int baseSalary, int bonus) {\n            super(baseSalary);\n            this.bonus = bonus;\n        }\n        int getSalary() {\n            return baseSalary + bonus;\n        }\n    }\n    class Developer extends Employee {\n        int bonus;\n        Developer(int baseSalary, int bonus) {\n            super(baseSalary);\n            this.bonus = bonus;\n        }\n        int getSalary() {\n            return baseSalary + bonus;\n        }\n    }\n    int totalPayroll(int managerBase, int managerBonus, int devBase, int devBonus) {\n        Employee[] team = new Employee[2];\n        team[0] = new Manager(managerBase, managerBonus);\n        team[1] = new Developer(devBase, devBonus);\n        int total = 0;\n        for (int i = 0; i < team.length; i++) {\n            total += team[i].getSalary();\n        }\n        return total;\n    }\n}',
+  explanation: '<p>Employee array me Manager aur Developer dono rakhe ja sakte hain, kyunki dono Employee hi hain. Loop me <code>getSalary()</code> call karne par runtime polymorphism se har object ka apna overridden version chalta hai — alag alag code likhne ki zaroorat nahi.</p>'
+});
