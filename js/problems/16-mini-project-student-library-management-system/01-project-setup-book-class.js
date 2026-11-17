@@ -1,0 +1,17 @@
+/* JavaQuest — Problem: Milestone 1: Project Setup and Book Class (Mini-Project: Student Library Management System, Easy) */
+PROBLEMS.push({
+  id: '16-01',
+  topicId: 16,
+  topic: 'Mini-Project: Student Library Management System',
+  title: 'Milestone 1: Project Setup and Book Class',
+  difficulty: 'Easy',
+  statement: '<p>Mini-project ki shuruaat karo: <b>Student Library Management System</b> ke liye project structure banao aur <code>Book</code> class likho. Book me <code>id</code>, <code>title</code>, <code>author</code> aur <code>isIssued</code> fields hone chahiye, saath me constructor, getters aur ek saaf <code>toString()</code>.</p><p>Nayi book banate waqt <code>isIssued</code> hamesha <code>false</code> hota hai — book tabhi issued hoti hai jab koi student use le jata hai. Yehi Book class aage ke saare milestones ki neev hai.</p>',
+  examples: [
+    { input: 'new Book(1, "Java Complete Reference", "Herbert Schildt")', output: 'Book{id=1, title=Java Complete Reference, author=Herbert Schildt, issued=false}', explanation: 'Nayi book ki issued status false hoti hai, baaki details constructor se set hoti hain.' },
+    { input: 'Usi book par setIssued(true) call karo, phir print karo', output: 'Book{id=1, title=Java Complete Reference, author=Herbert Schildt, issued=true}', explanation: 'setIssued se status badal jata hai aur toString nayi status dikhata hai.' }
+  ],
+  constraints: ['Book class ke 4 fields hone chahiye: id, title, author, isIssued.', 'Nayi book ki isIssued hamesha false honi chahiye.', 'toString me saari details dikhni chahiye.'],
+  starter: 'class Solution {\n    // Project structure:\n    // LibrarySystem/\n    //   Book.java     -> Book class (is milestone me banani hai)\n    //   Library.java  -> book collection (Milestone 2)\n    //   Main.java     -> menu-driven program (Milestone 2 se)\n\n    static class Book {\n        int id;\n        String title;\n        String author;\n        boolean isIssued;\n\n        Book(int id, String title, String author) {\n            // TODO: fields set karo, isIssued = false\n        }\n\n        // TODO: getters, setIssued aur toString() likho\n    }\n\n    public static void main(String[] args) {\n        // TODO: ek Book object banao aur print karo\n    }\n}',
+  solution: 'class Solution {\n    static class Book {\n        int id;\n        String title;\n        String author;\n        boolean isIssued;\n\n        Book(int id, String title, String author) {\n            this.id = id;\n            this.title = title;\n            this.author = author;\n            this.isIssued = false;\n        }\n\n        public int getId() { return id; }\n        public String getTitle() { return title; }\n        public String getAuthor() { return author; }\n        public boolean isIssued() { return isIssued; }\n        public void setIssued(boolean issued) { isIssued = issued; }\n\n        public String toString() {\n            return "Book{id=" + id + ", title=" + title + ", author=" + author + ", issued=" + isIssued + "}";\n        }\n    }\n\n    public static void main(String[] args) {\n        Book b = new Book(1, "Java Complete Reference", "Herbert Schildt");\n        System.out.println(b);\n    }\n}',
+  explanation: '<p>Book ek simple POJO (Plain Old Java Object) hai — fields private rakhna best practice hai, par yahaan readability ke liye simple rakha gaya hai. Constructor nayi book ko available (issued = false) banata hai, aur <code>toString()</code> debugging aur display dono ke kaam aata hai.</p>'
+});
