@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Programming in Java — 26CS021 Study Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef4f1; --bg2:#e2ede8; --card:#ffffff; --card2:#f6faf8;
+  --ink:#14231f; --ink2:#43564f; --ink3:#71857d;
+  --teal:#0d6e63; --teal-d:#095046; --teal-soft:#d7ebe4;
+  --amber:#c77400; --amber-soft:#fdeeda; --amber-coin:#e8930c;
+  --coral:#c2432b; --coral-soft:#fbe7e1;
+  --line:#cfded6; --code-bg:#12211d; --code-ink:#d9f2e6;
+  --shadow:0 18px 40px -18px rgba(9,60,50,.35);
+  --shadow-sm:0 8px 22px -10px rgba(9,60,50,.28);
+  --r-lg:20px; --r-md:14px; --r-sm:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0c1512; --bg2:#0a100e; --card:#15211c; --card2:#182720;
+    --ink:#e8f2ed; --ink2:#b3c6bd; --ink3:#7e948a;
+    --teal:#2fbfa9; --teal-d:#7fe3d2; --teal-soft:#173a33;
+    --amber:#f0a63c; --amber-soft:#3a2a10; --amber-coin:#f5b73e;
+    --coral:#f08068; --coral-soft:#3d1d15;
+    --line:#26382f; --code-bg:#081009; --code-ink:#c9f5de;
+    --shadow:0 18px 40px -18px rgba(0,0,0,.7);
+    --shadow-sm:0 8px 22px -10px rgba(0,0,0,.6);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+button,[role="button"],select,summary,input:not([type="checkbox"],[type="radio"]){min-height:2.25rem}
+button{font-family:inherit;cursor:pointer}
+code,pre{font-family:"JetBrains Mono",monospace}
+a{color:var(--teal)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* ---------- Top bar ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.topbar-in{display:flex;align-items:center;gap:14px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.02rem;letter-spacing:-.01em}
+.brand .mark{width:38px;height:38px;border-radius:11px;background:var(--teal);color:#fff;display:grid;place-items:center;font-family:"JetBrains Mono",monospace;font-weight:600;font-size:.95rem;box-shadow:var(--shadow-sm);transform:rotate(-4deg)}
+.brand small{display:block;font-weight:500;color:var(--ink2);font-size:.72rem;letter-spacing:.02em}
+.topstats{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.pill{display:inline-flex;align-items:center;gap:7px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-weight:700;font-size:.86rem;box-shadow:var(--shadow-sm)}
+.pill .coin-ic{width:19px;height:19px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ffd97a,var(--amber-coin) 60%,#b96e00);display:inline-grid;place-items:center;color:#5c3a00;font-size:.62rem;font-weight:900;border:1.5px solid #a86400}
+.pill.streak{color:var(--coral)}
+.pill .lbl{color:var(--ink3);font-weight:500;font-size:.74rem}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--bg) 0%,var(--bg2) 100%);border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;padding:44px 0 38px;align-items:center}
+.hero h1{font-size:clamp(2rem,5.2vw,3.4rem);line-height:1.04;margin:0 0 12px;font-weight:900;letter-spacing:-.025em}
+.hero h1 .hl{color:var(--teal)}
+.hero p.lead{font-size:1.06rem;color:var(--ink2);line-height:1.6;margin:0 0 20px;max-width:56ch}
+.course-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.8rem;font-weight:600;color:var(--ink2)}
+.chip b{color:var(--ink)}
+.hero-cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:none;border-radius:12px;padding:12px 20px;font-weight:800;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;transition:transform .15s ease, box-shadow .15s ease}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-ghost{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+.hstat{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px}
+.hstat b{font-size:1.3rem;display:block;letter-spacing:-.02em}
+.hstat span{font-size:.74rem;color:var(--ink3);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+
+/* 3D cube */
+.cube-stage{perspective:900px;display:grid;place-items:center;min-height:280px}
+.cube{position:relative;width:150px;height:150px;transform-style:preserve-3d;animation:spin 22s linear infinite}
+@media (prefers-reduced-motion: reduce){.cube{animation:none;transform:rotateX(-18deg) rotateY(32deg)}}
+@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+.face{position:absolute;inset:0;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-weight:900;color:#fff;text-align:center;padding:10px;border:1px solid rgba(255,255,255,.35);backface-visibility:hidden}
+.face small{font-weight:500;font-size:.68rem;opacity:.85}
+.face .big{font-size:1.5rem;font-family:"JetBrains Mono",monospace}
+.f1{background:rgba(13,110,99,.92);transform:translateZ(75px)}
+.f2{background:rgba(199,116,0,.92);transform:rotateY(180deg) translateZ(75px)}
+.f3{background:rgba(20,80,110,.92);transform:rotateY(90deg) translateZ(75px)}
+.f4{background:rgba(120,52,110,.9);transform:rotateY(-90deg) translateZ(75px)}
+.f5{background:rgba(64,110,40,.92);transform:rotateX(90deg) translateZ(75px)}
+.f6{background:rgba(160,60,40,.92);transform:rotateX(-90deg) translateZ(75px)}
+.cube-shadow{width:170px;height:26px;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.28),transparent 70%);margin-top:34px;filter:blur(2px)}
+.cube-cap{text-align:center;color:var(--ink3);font-size:.8rem;font-weight:600;margin-top:8px}
+
+/* ---------- Progress strip ---------- */
+.progress-strip{padding:22px 0 4px}
+.pstrip-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;box-shadow:var(--shadow-sm);display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center}
+.ring{width:74px;height:74px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring .ring-txt{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:1rem}
+.pstrip-card h3{margin:0 0 4px;font-size:1rem}
+.pstrip-card p{margin:0;color:var(--ink2);font-size:.88rem;line-height:1.5}
+.bar{height:10px;background:var(--teal-soft);border-radius:99px;overflow:hidden;margin-top:10px}
+.bar i{display:block;height:100%;background:var(--teal);border-radius:99px;transition:width .6s ease}
+.next-up{font-size:.85rem;font-weight:700;color:var(--teal);white-space:nowrap}
+
+/* ---------- How it works ---------- */
+.how{padding:26px 0 6px}
+.how h2,.seasons-head h2{font-size:1.45rem;margin:0 0 6px;letter-spacing:-.02em}
+.how p.sub,.seasons-head p{color:var(--ink2);margin:0 0 16px;line-height:1.55}
+.how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.how-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:16px;box-shadow:var(--shadow-sm)}
+.how-card .step{width:30px;height:30px;border-radius:9px;background:var(--teal-soft);color:var(--teal-d);display:grid;place-items:center;font-weight:900;font-size:.9rem;margin-bottom:10px}
+.how-card h4{margin:0 0 5px;font-size:.95rem}
+.how-card p{margin:0;font-size:.84rem;color:var(--ink2);line-height:1.5}
+
+/* ---------- Seasons ---------- */
+.seasons-head{padding:30px 0 4px}
+.season{margin:22px 0 34px}
+.season-card{border-radius:var(--r-lg);border:1px solid var(--line);background:var(--card);box-shadow:var(--shadow);overflow:hidden;transform-style:preserve-3d;transition:transform .25s ease}
+.season-head-row{display:flex;gap:16px;align-items:flex-start;padding:20px 22px 14px;flex-wrap:wrap}
+.season-badge{flex:none;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:1.25rem;box-shadow:var(--shadow-sm);transform:rotate(-3deg)}
+.season-head-row h3{margin:0;font-size:1.3rem;letter-spacing:-.015em}
+.season-head-row .s-sub{color:var(--ink2);font-size:.9rem;margin-top:3px;line-height:1.5}
+.season-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.stag{font-size:.72rem;font-weight:700;background:var(--card2);border:1px solid var(--line);padding:4px 9px;border-radius:99px;color:var(--ink2)}
+.season-side{margin-left:auto;text-align:right;flex:none}
+.season-side .pct{font-size:1.5rem;font-weight:900}
+.season-side .of{color:var(--ink3);font-size:.78rem;font-weight:600}
+.season-bar{height:8px;background:var(--teal-soft);margin:0 22px;border-radius:99px;overflow:hidden}
+.season-bar i{display:block;height:100%;border-radius:99px;transition:width .6s ease}
+.season-actions{padding:14px 22px 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.lock-note{font-size:.86rem;color:var(--ink2);display:flex;gap:8px;align-items:center;line-height:1.45}
+.btn-unlock{background:var(--amber);color:#fff;box-shadow:var(--shadow-sm)}
+.btn-unlock:disabled{opacity:.45;cursor:not-allowed}
+.btn-done{background:var(--teal-soft);color:var(--teal-d);border:1px solid var(--line)}
+.season.locked .season-card{opacity:.92}
+.season.locked .topics{filter:saturate(.4)}
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;padding:6px 22px 22px}
+.topic-card{position:relative;background:var(--card2);border:1px solid var(--line);border-radius:var(--r-md);padding:16px;text-align:left;width:100%;transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;color:var(--ink)}
+.topic-card:not(:disabled):hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--teal)}
+.topic-card:disabled{cursor:not-allowed;opacity:.75}
+.topic-card .t-num{font-family:"JetBrains Mono",monospace;font-size:.72rem;font-weight:600;color:var(--teal);letter-spacing:.06em}
+.topic-card h4{margin:5px 0 6px;font-size:1.02rem;line-height:1.3}
+.topic-card p{margin:0;font-size:.82rem;color:var(--ink2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.topic-card .t-foot{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px;align-items:center}
+.tchip{font-size:.7rem;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--card);border:1px solid var(--line);color:var(--ink2)}
+.tchip.done{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tchip.coins{background:var(--amber-soft);color:var(--amber);border-color:transparent}
+.topic-card .lock-ic{position:absolute;top:12px;right:12px;font-size:.95rem}
+.topic-card .done-badge{position:absolute;top:10px;right:10px;background:var(--teal);color:#fff;font-size:.68rem;font-weight:800;padding:4px 9px;border-radius:99px}
+
+/* ---------- Lesson sheet ---------- */
+.sheet{position:fixed;inset:0;z-index:100;display:none}
+.sheet.open{display:block}
+.sheet-bg{position:absolute;inset:0;background:rgba(6,18,14,.55);backdrop-filter:blur(3px)}
+.sheet-panel{position:absolute;inset:0;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch}
+.lesson-wrap{max-width:920px;margin:0 auto;padding:0 18px 90px}
+.lesson-top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center}
+.lesson-top .back{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 14px;font-weight:800;font-size:.88rem;color:var(--ink)}
+.lesson-top .lt-title{font-weight:800;font-size:.92rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lesson-top .lt-prog{margin-left:auto;font-size:.8rem;font-weight:700;color:var(--ink2);white-space:nowrap}
+.lesson-hero{padding:26px 0 6px}
+.lesson-hero .kicker{font-family:"JetBrains Mono",monospace;font-size:.74rem;color:var(--teal);font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.lesson-hero h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin:6px 0 8px;letter-spacing:-.02em;line-height:1.12}
+.lesson-hero p{color:var(--ink2);line-height:1.65;margin:0;max-width:64ch}
+.subtabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 6px}
+.subtab{border:1px solid var(--line);background:var(--card);color:var(--ink2);border-radius:999px;padding:9px 15px;font-weight:700;font-size:.86rem}
+.subtab.active{background:var(--teal);border-color:var(--teal);color:#fff}
+.subtab.seen{border-color:var(--teal);color:var(--teal-d)}
+.subbody{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px;box-shadow:var(--shadow-sm);margin-top:12px}
+.subbody h3{margin:0 0 10px;font-size:1.25rem;letter-spacing:-.01em}
+.subbody p{line-height:1.75;color:var(--ink2);margin:0 0 12px}
+.subbody p b,.subbody li b{color:var(--ink)}
+.subbody ul{margin:0 0 12px;padding-left:20px;color:var(--ink2);line-height:1.75}
+.subbody .callout{background:var(--teal-soft);border-radius:var(--r-md);padding:13px 15px;font-size:.92rem;line-height:1.6;color:var(--ink);margin:14px 0}
+.subbody .callout.warn{background:var(--amber-soft)}
+pre.code{background:var(--code-bg);color:var(--code-ink);border-radius:var(--r-md);padding:16px;overflow-x:auto;font-size:.83rem;line-height:1.65;margin:12px 0}
+pre.code .cm{color:#7ba98f}
+.out{background:var(--card2);border:1px dashed var(--line);border-radius:var(--r-md);padding:11px 14px;font-family:"JetBrains Mono",monospace;font-size:.8rem;margin:0 0 14px;color:var(--ink2);white-space:pre-wrap}
+.out b{color:var(--teal);font-size:.68rem;letter-spacing:.08em;display:block;margin-bottom:4px}
+table.cmp{width:100%;border-collapse:collapse;margin:12px 0;font-size:.88rem}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top;line-height:1.5}
+table.cmp th{background:var(--card2);font-weight:800}
+.mark-seen{margin-top:16px}
+.section-block{margin-top:26px}
+.section-block>h3{font-size:1.2rem;margin:0 0 4px}
+.section-block>p{color:var(--ink2);margin:0 0 12px;line-height:1.6;font-size:.93rem}
+.practice-list{display:grid;gap:10px}
+.practice-item{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;display:flex;gap:12px;align-items:flex-start}
+.practice-item .pn{flex:none;width:28px;height:28px;border-radius:8px;background:var(--amber-soft);color:var(--amber);font-weight:900;display:grid;place-items:center;font-size:.82rem}
+.practice-item p{margin:0;line-height:1.6;font-size:.93rem}
+.practice-item .tag{font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);display:block;margin-bottom:2px}
+
+/* Quiz */
+.quiz-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow-sm)}
+.quiz-meta{display:flex;justify-content:space-between;font-size:.82rem;font-weight:700;color:var(--ink2);margin-bottom:10px}
+.quiz-q{font-size:1.08rem;font-weight:700;line-height:1.55;margin:0 0 14px}
+.quiz-q code{background:var(--teal-soft);padding:1px 6px;border-radius:6px;font-size:.92em}
+.opts{display:grid;gap:9px}
+.opt{border:1.5px solid var(--line);background:var(--card2);border-radius:12px;padding:13px 15px;text-align:left;font-size:.95rem;font-weight:600;color:var(--ink);width:100%;line-height:1.5}
+.opt:hover:not(:disabled){border-color:var(--teal)}
+.opt.right{border-color:var(--teal);background:var(--teal-soft)}
+.opt.wrong{border-color:var(--coral);background:var(--coral-soft)}
+.opt:disabled{cursor:default;opacity:.92}
+.explain{display:none;margin-top:13px;background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.9rem;line-height:1.6;color:var(--ink2)}
+.explain.show{display:block}
+.explain b{color:var(--ink)}
+.quiz-nav{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.quiz-result{text-align:center;padding:10px 0}
+.quiz-result .score-big{font-size:2.6rem;font-weight:900;letter-spacing:-.03em}
+.quiz-result p{color:var(--ink2);line-height:1.6}
+.reward-toast{display:none;background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);border-radius:12px;padding:13px 15px;font-weight:700;margin-top:14px;line-height:1.55}
+.reward-toast.show{display:block}
+
+/* Question bank */
+.bank-list{columns:1;gap:10px}
+@media(min-width:760px){.bank-list{columns:2}}
+.bank-item{break-inside:avoid;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;margin-bottom:10px;font-size:.9rem;line-height:1.55}
+.bank-item b{color:var(--teal)}
+
+/* Footer */
+footer{border-top:1px solid var(--line);margin-top:20px;padding:26px 0 40px;color:var(--ink2);font-size:.88rem;line-height:1.7}
+footer h4{color:var(--ink);margin:0 0 8px}
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-bottom:18px}
+.res-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px}
+.res-card b{display:block;margin-bottom:3px;color:var(--ink)}
+
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr}
+  .cube-stage{min-height:220px;order:-1}
+  .how-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .pstrip-card{grid-template-columns:auto 1fr}
+  .next-up{grid-column:1/-1}
+  .season-side{margin-left:0;text-align:left}
+}
+@media(max-width:520px){
+  .how-grid{grid-template-columns:1fr}
+  .topics{grid-template-columns:1fr;padding:6px 14px 18px}
+  .season-head-row,.season-actions{padding-left:14px;padding-right:14px}
+  .season-bar{margin:0 14px}
+  .subbody{padding:18px 15px}
+  .brand small{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div class="brand"><span class="mark">{;}</span><span>JavaQuest<small>26CS021 · Programming in Java · Chitkara University</small></span></div>
+    <div class="topstats">
+      <span class="pill streak" title="Daily streak"><span aria-hidden="true">▲</span><span id="streakVal">1</span><span class="lbl">day streak</span></span>
+      <span class="pill" title="Coins wallet"><span class="coin-ic">C</span><span id="coinVal">0</span><span class="lbl">coins</span></span>
+      <span class="pill" title="Topics completed"><span id="doneVal">0/16</span><span class="lbl">topics</span></span>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <h1>Programming in <span class="hl">Java</span>,<br>season by season.</h1>
+      <p class="lead">Poora 26CS021 course handout — Lectures 1 se 90 tak — ek hi jagah. Har topic pehle simple shabdon me samjhaya gaya hai, phir code examples, phir practice questions, aur aakhir me MCQ quiz. Season complete kiye bina agla season nahi khulega.</p>
+      <div class="course-meta">
+        <span class="chip">Course <b>26CS021</b></span>
+        <span class="chip">Credits <b>04</b></span>
+        <span class="chip">Semester <b>3rd · 2025–2029</b></span>
+        <span class="chip">Coordinator <b>Alok Kumar Agrawal</b></span>
+        <span class="chip">ETE Paper Split <b>30% + 35% + 35%</b></span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="continueBtn">▶ Continue Learning</button>
+        <button class="btn btn-ghost" id="bankBtn">Strings — 50 Important Questions</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><b>5</b><span>Seasons</span></div>
+        <div class="hstat"><b>16</b><span>Topics</span></div>
+        <div class="hstat"><b>90</b><span>Lectures covered</span></div>
+        <div class="hstat"><b>126</b><span>MCQs with answers</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="cube-stage">
+        <div>
+          <div class="cube" aria-hidden="true">
+            <div class="face f1"><span class="big">JVM</span><small>Write once, run anywhere</small></div>
+            <div class="face f2"><span class="big">OOP</span><small>Class · Object · Inheritance</small></div>
+            <div class="face f3"><span class="big">JDK</span><small>Compiler + Libraries</small></div>
+            <div class="face f4"><span class="big">{ }</span><small>Strings · Collections</small></div>
+            <div class="face f5"><span class="big">try</span><small>Exception Handling</small></div>
+            <div class="face f6"><span class="big">SQL</span><small>JDBC Connectivity</small></div>
+          </div>
+          <div class="cube-shadow"></div>
+          <div class="cube-cap">Java ecosystem — har face ek season ka concept</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap progress-strip">
+  <div class="pstrip-card">
+    <div class="ring">
+      <svg width="74" height="74" viewBox="0 0 74 74"><circle cx="37" cy="37" r="31" fill="none" stroke="var(--teal-soft)" stroke-width="8"/><circle id="ringFg" cx="37" cy="37" r="31" fill="none" stroke="var(--teal)" stroke-width="8" stroke-linecap="round" stroke-dasharray="194.8" stroke-dashoffset="194.8"/></svg>
+      <div class="ring-txt" id="ringTxt">0%</div>
+    </div>
+    <div>
+      <h3 id="progTitle">Tumhari progress</h3>
+      <p id="progSub">Season 1 se shuru karo. Har topic ka quiz 70% ya zyada score pe pass hota hai — tabhi topic complete count hoga.</p>
+      <div class="bar"><i id="progBar" style="width:0%"></i></div>
+    </div>
+    <div class="next-up" id="nextUp">Next: Introduction to Java →</div>
+  </div>
+</div>
+
+<div class="wrap how">
+  <h2>Website ka layout — kaise chalega?</h2>
+  <p class="sub">Bilkul waisa hi flow jo tumne bola tha: pehle samajh, phir example, phir questions, phir quiz — aur sab kuch seasons me bandha hua.</p>
+  <div class="how-grid">
+    <div class="how-card"><div class="step">1</div><h4>Topic kholo</h4><p>Season ke andar topic pe click karo. Topic ke andar sub-topics hain — jaise Strings me String, StringBuilder, StringBuffer alag-alag.</p></div>
+    <div class="how-card"><div class="step">2</div><h4>Samjho + Examples</h4><p>Har sub-topic simple language me explanation, ready-to-run code aur uska output ke saath diya hai.</p></div>
+    <div class="how-card"><div class="step">3</div><h4>Practice + Quiz</h4><p>Topic ke end me practice questions aur ek MCQ quiz. Quiz me 70%+ laoge tabhi topic complete hoga.</p></div>
+    <div class="how-card"><div class="step">4</div><h4>Coins + Unlock</h4><p>Topic complete = <b>+30 coins</b>, season complete = <b>+100 bonus coins</b>. Season khatam karke agla unlock karo — ya 150 coins kharch karke early unlock bhi kar sakte ho.</p></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="seasons-head">
+    <h2>Tumhara Season Map</h2>
+    <p>CHO ke lecture plan ke hisaab se 16 topics ko 5 seasons me baanta gaya hai. Locked season tabhi khulega jab pichla season 100% complete ho — ya wallet me 150 coins hon to early unlock.</p>
+    <p style="font-size:.86rem">Ek note: CHO me kuch topics ki <b>practice lectures baad me dobara</b> aati hain — isiliye kuch topic cards pe lecture numbers aage ke season ki range me dikhenge. Jaise Classes &amp; Objects ki practice Lectures 51–52 me, Serialization ki practice Lectures 71–72 me, aur Lecture 89 Collections ke iterators/sorting dono ko cover karta hai. Ye CHO ka apna plan hai, galti nahi.</p>
+  </div>
+  <div id="seasonsRoot"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h4>CHO ke recommended resources</h4>
+    <div class="res-grid">
+      <div class="res-card"><b>B01 — Core Java, Vol. I</b>C. S. Horstmann, 14th ed., Pearson 2025 — course ki main book.</div>
+      <div class="res-card"><b>B02 — Head First Java</b>K. Sierra, B. Bates, T. Trinh, 3rd ed., O'Reilly 2022.</div>
+      <div class="res-card"><b>NPTEL — Programming in Java</b>Prof. Debasis Samanta, IIT Kharagpur — <a href="https://www.youtube.com/playlist?list=PLbMVogVj5nJQ0C2B2vM4A4m1l6n8N2bM" target="_blank" rel="noopener">YouTube playlist (CHO V1)</a></div>
+      <div class="res-card"><b>GeeksforGeeks — Java OOPs</b><a href="https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/" target="_blank" rel="noopener">geeksforgeeks.org/java</a> (CHO R4) · <a href="https://www.w3schools.com/java/default.asp" target="_blank" rel="noopener">W3Schools Java</a> (CHO R3)</div>
+    </div>
+    <p>Evaluation yaad rakho (do alag cheezein hain, confuse mat hona): <b>Overall marks</b> — FA 20% · Sessional Tests 30% (ST-1: Lectures 1–36, ST-2: Lectures 37–72) · End Term 50%. Aur <b>ETE paper ke andar syllabus ka hissa</b> — Season 1 ke topics se ~30%, Season 3 ke topics se ~35%, Season 5 ke topics se ~35% questions aate hain (CHO ki apni table). ST pattern: 1-mark MCQ ×10, 2-marks MCQ ×5, 5-marks coding ×2, 10-marks coding ×1. Isiliye har topic me MCQ ke saath coding practice questions bhi diye hain.</p>
+    <p style="color:var(--ink3);font-size:.8rem">Progress, coins, streak aur season unlocks tumhare browser me save rehte hain — page refresh karne ya band karke dobara kholne pe journey wahi se continue hogi jahan chhodi thi. Roz aane se streak badhti hai; ek din ka gap pad jaye to streak 1 se dobara shuru hoti hai.</p>
+  </div>
+</footer>
+
+<!-- Lesson sheet -->
+<div class="sheet" id="lessonSheet" role="dialog" aria-modal="true">
+  <div class="sheet-bg" id="sheetBg"></div>
+  <div class="sheet-panel">
+    <div class="lesson-wrap">
+      <div class="lesson-top">
+        <button class="back" id="closeLesson">← Seasons</button>
+        <span class="lt-title" id="ltTitle"></span>
+        <span class="lt-prog" id="ltProg"></span>
+      </div>
+      <div id="lessonBody"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Question bank sheet -->
+<div class="sheet" id="bankSheet" role="dialog" aria-modal="true">
+  <div class="sheet-bg" id="bankBg"></div>
+  <div class="sheet-panel">
+    <div class="lesson-wrap">
+      <div class="lesson-top">
+        <button class="back" id="closeBank">← Back</button>
+        <span class="lt-title">Strings — 50 Important Questions</span>
+      </div>
+      <div class="lesson-hero">
+        <div class="kicker">Topic 8 · Question Bank</div>
+        <h2>Strings ke 50 sabse important questions</h2>
+        <p>Ye woh questions hain jo ST aur ETE me baar-baar aate hain — String, StringBuffer, StringBuilder, StringTokenizer aur toString() mila ke. Pehle Strings topic ke sub-topics padh lo, phir inhe ek-ek karke likh ke practice karo. Quiz ke MCQ is bank se alag, topic ke andar hain.</p>
+      </div>
+      <div class="bank-list" id="bankList" style="margin-top:18px"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ================= DATA — 26CS021 CHO, Lectures 1–90 ================= */
+var SEASONS = [
+  {id:1, name:"Season 1 · Foundations", sub:"Java ki duniya ka entry gate — history, JVM, basics aur flow control.", lectures:"Lectures 1–21", weight:"ETE Paper Share · 30%", color:"#0d6e63"},
+  {id:2, name:"Season 2 · Core Programming", sub:"Data ko store karna (Arrays) aur real-world ko code me banana (Classes & Objects).", lectures:"Lectures 22–38", weight:"ST-1 finishes here", color:"#14607e"},
+  {id:3, name:"Season 3 · OOP Mastery", sub:"Inheritance, abstraction, packages, interfaces — aur tumhara favourite: Strings.", lectures:"Lectures 39–58", weight:"ETE Paper Share · 35%", color:"#7a346e"},
+  {id:4, name:"Season 4 · Robust & Concurrent Java", sub:"Errors ko sambhalna, ek saath kai kaam karna, aur type-safe code likhna.", lectures:"Lectures 59–72", weight:"ST-2 finishes here", color:"#406e28"},
+  {id:5, name:"Season 5 · Data, IO & Database", sub:"Collections, files, database — aur aakhir me poora mini-project.", lectures:"Lectures 73–90", weight:"ETE Paper Share · 35%", color:"#a03c28"}
+];
+</script>
+<script>var TOPICS = [];</script>
+<script src="js/topics/01-introduction-to-java.js"></script>
+<script src="js/topics/02-java-basics.js"></script>
+<script src="js/topics/03-control-statements.js"></script>
+<script src="js/topics/04-arrays.js"></script>
+<script src="js/topics/05-classes-objects.js"></script>
+<script src="js/topics/06-inheritance.js"></script>
+<script src="js/topics/07-abstract-classes-packages-interfaces.js"></script>
+<script src="js/topics/08-strings-string-stringbuilder-stringbuffer.js"></script>
+<script src="js/topics/09-exception-handling.js"></script>
+<script src="js/topics/10-multithreading.js"></script>
+<script src="js/topics/11-generics.js"></script>
+<script src="js/topics/12-collections-framework.js"></script>
+<script src="js/topics/13-io-streams-serialization.js"></script>
+<script src="js/topics/14-jdbc-connectivity.js"></script>
+<script src="js/topics/15-iterators-comparators-sorting-collections.js"></script>
+<script src="js/topics/16-mini-project-student-library-management-system.js"></script>
+
+
+<script>
+
+
+/* ================= STRINGS — 50 IMPORTANT QUESTIONS ================= */
+var STR_BANK = [
+ "String ko immutable kyun kaha jata hai? Ek program se sabit karo ki method call ke baad original String nahi badalta.",
+ "String Constant Pool kya hai? Literal aur new String() me memory ka farak diagram se samjhao.",
+ "== aur equals() me kya farak hai? String pe dono ka alag result aane wala program likho.",
+ "String ke 10 important methods likho — har ek ka ek-line use aur example output.",
+ "compareTo() method kaise kaam karta hai? \"abc\".compareTo(\"abd\") aur \"abc\".compareTo(\"abc\") ka output batao.",
+ "substring() ke dono forms samjhao. \"Programming\".substring(3, 7) ka output kya hoga?",
+ "indexOf() aur lastIndexOf() me farak ek example se dikhao. Character na mile to kya return hota hai?",
+ "String immutable hone ke 4 fayde likho (security, pool, thread-safety, hashcode caching).",
+ "Loop me String concatenation slow kyun hota hai? 1000 baar jodne ka sahi tareeka kya hai?",
+ "StringBuffer kya hai? Uske 8 methods ek-ek example ke saath likho.",
+ "StringBuilder kya hai? StringBuffer se iska ek hi asal farak kya hai?",
+ "String, StringBuffer, StringBuilder — 6 points ki comparison table banao.",
+ "Capacity kya hoti hai? new StringBuffer() aur new StringBuffer(\"Hello\") ki capacity kitni hogi?",
+ "Capacity badhne ka formula kya hai? Ek buffer ki capacity 16 se bhare to nayi kitni hogi?",
+ "append(), insert(), delete(), replace(), reverse() — paancho ka ek hi program me use dikhao.",
+ "delete() aur deleteCharAt() me kya farak hai? Bounds galat do to kaunsi exception aati hai?",
+ "StringBuffer thread-safe kyun hai? synchronized ka role samjhao.",
+ "StringBuffer equals() ko override kyun nahi karta? Content compare ka sahi tareeka kya hai?",
+ "String ko StringBuffer me aur wapas String me convert karne ke tareeke likho.",
+ "charAt() aur setCharAt() ka use ek program me dikhao.",
+ "StringTokenizer kya hai? Default delimiter kya hota hai?",
+ "StringTokenizer se ek sentence ke words count karne ka program likho.",
+ "Custom delimiter ke saath StringTokenizer ka program likho (comma-separated values).",
+ "countTokens() aur hasMoreTokens() ka use samjhao.",
+ "toString() method kya hai? Default toString() kya return karta hai?",
+ "Apni class me toString() override karne ka program likho aur fayda batao.",
+ "Object print karne pe toString() khud call hota hai — ye statement ek example se sabit karo.",
+ "String ko char array me (toCharArray) aur char array ko String me badalne ka program likho.",
+ "split() method ka use: ek CSV line ko parts me todne ka program.",
+ "trim(), toUpperCase(), toLowerCase() — teeno ka ek program me combined use dikhao.",
+ "String palindrome check karne ka program likho (do tareeke: loop aur StringBuilder reverse).",
+ "Ek string me vowels aur consonants count karne ka program likho.",
+ "String reverse karne ke 3 tareeke likho — loop, StringBuilder, StringBuffer.",
+ "Do strings anagram hain ya nahi — check karne ka program likho.",
+ "String me kisi character ki frequency count karne ka program likho.",
+ "concat() aur + operator me koi farak hai? Null ke case me dono ka behaviour batao.",
+ "String.valueOf() ka use kya hai? int ko String me badalne ke 3 tareeke likho.",
+ "String.format() se formatted output ka ek example likho.",
+ "intern() method kya karta hai? Pool ke saath uska relation samjhao.",
+ "String me replace() aur replaceAll() me kya farak hai?",
+ "startsWith(), endsWith(), contains() — teeno ka ek validation program me use dikhao.",
+ "Ek email string se username aur domain alag karne ka program likho (indexOf + substring).",
+ "String join() method (String.join) ka example likho.",
+ "Empty string, blank string aur null string me farak — isEmpty(), isBlank() ke saath.",
+ "String ke case me hashCode() caching ka kya matlab hai?",
+ "length() String me method hai par array me property — ye farak kyun hai?",
+ "StringBuffer ka ensureCapacity() method kya karta hai?",
+ "StringBuilder ki jagah StringBuffer kab chunoge — 2 real scenarios likho.",
+ "Multi-threaded program me StringBuilder use karne ka risk kya hai? Ek scenario samjhao.",
+ "Final revision: ek aisa program likho jisme String, StringBuilder, StringBuffer aur StringTokenizer — chaaro ek saath use hon."
+];
+</script>
+<script>
+/* ================= APP LOGIC ================= */
+var UNLOCK_COST = 150, TOPIC_COINS = 30, SEASON_BONUS = 100, PERFECT_BONUS = 20;
+var state = {
+  coins: 0, streak: 1,
+  done: {},            // topicId -> true
+  scores: {},          // topicId -> best %
+  seen: {},            // topicId -> {subIndex:true}
+  paidUnlock: {},      // seasonId -> true (bought with coins)
+  seasonBonusGiven: {},
+  lastVisit: null      // "YYYY-MM-DD" — streak tracking ke liye
+};
+
+/* ---------- Persistence (localStorage) ---------- */
+var SAVE_KEY = "javaquest-progress-v1";
+function saveState(){
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); } catch (e) { /* storage unavailable — session memory me chalega */ }
+}
+function loadState(){
+  var raw = null;
+  try { raw = localStorage.getItem(SAVE_KEY); } catch (e) {}
+  if (!raw) return;
+  try {
+    var s = JSON.parse(raw);
+    if (!s || typeof s !== "object") return;
+    if (typeof s.coins === "number" && isFinite(s.coins) && s.coins >= 0) state.coins = Math.floor(s.coins);
+    if (typeof s.streak === "number" && isFinite(s.streak) && s.streak >= 1) state.streak = Math.floor(s.streak);
+    ["done", "scores", "seen", "paidUnlock", "seasonBonusGiven"].forEach(function(k){
+      if (s[k] && typeof s[k] === "object" && !Array.isArray(s[k])) state[k] = s[k];
+    });
+    if (typeof s.lastVisit === "string") state.lastVisit = s.lastVisit;
+  } catch (e) { /* corrupted save — fresh state se shuru */ }
+}
+function dayStr(d){
+  var m = d.getMonth() + 1, day = d.getDate();
+  return d.getFullYear() + "-" + (m < 10 ? "0" : "") + m + "-" + (day < 10 ? "0" : "") + day;
+}
+function refreshStreak(){
+  var now = new Date(), today = dayStr(now);
+  if (state.lastVisit === today) return;               // aaj pehle aa chuke ho
+  if (state.lastVisit) {
+    var y = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+    state.streak = (state.lastVisit === dayStr(y)) ? state.streak + 1 : 1;  // kal aaye the to +1, gap pada to reset
+  } else {
+    state.streak = 1;                                    // pehla din
+  }
+  state.lastVisit = today;
+}
+var curTopic = null, curSub = 0, quizIdx = 0, quizScore = 0, quizAnswered = false;
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return s; } // content is authored HTML by design
+function topicById(id){ for (var i=0;i<TOPICS.length;i++) if (TOPICS[i].id===id) return TOPICS[i]; return null; }
+function seasonTopics(sid){ return TOPICS.filter(function(t){ return t.season===sid; }); }
+function seasonDoneCount(sid){ return seasonTopics(sid).filter(function(t){ return state.done[t.id]; }).length; }
+function seasonComplete(sid){ var ts = seasonTopics(sid); return ts.length > 0 && seasonDoneCount(sid) === ts.length; }
+function isSeasonUnlocked(sid){
+  if (sid === 1) return true;
+  if (state.paidUnlock[sid]) return true;
+  return seasonComplete(sid - 1);
+}
+function totalDone(){ return Object.keys(state.done).length; }
+
+function updateHud(){
+  $("coinVal").textContent = state.coins;
+  $("streakVal").textContent = state.streak;
+  $("doneVal").textContent = totalDone() + "/16";
+  var pct = Math.round(totalDone() / 16 * 100);
+  $("ringTxt").textContent = pct + "%";
+  $("progBar").style.width = pct + "%";
+  $("ringFg").style.strokeDashoffset = (194.8 * (1 - pct / 100)).toFixed(1);
+  var next = TOPICS.filter(function(t){ return !state.done[t.id] && isSeasonUnlocked(t.season); })[0];
+  if (next) $("nextUp").textContent = "Next: " + next.title + " →";
+  else if (totalDone() === 16) $("nextUp").textContent = "Course complete — ETE ready!";
+  else $("nextUp").textContent = "Agla season unlock karo →";
+  $("progSub").textContent = totalDone() === 0
+    ? "Season 1 se shuru karo. Har topic ka quiz 70% ya zyada score pe pass hota hai — tabhi topic complete count hoga."
+    : totalDone() + " topics complete, " + state.coins + " coins wallet me. Aise hi chalte raho — streak bani rehni chahiye!";
+}
+
+function renderSeasons(){
+  var root = $("seasonsRoot"); root.innerHTML = "";
+  SEASONS.forEach(function(s){
+    var topics = seasonTopics(s.id);
+    var done = seasonDoneCount(s.id);
+    var pct = Math.round(done / topics.length * 100);
+    var unlocked = isSeasonUnlocked(s.id);
+    var complete = seasonComplete(s.id);
+    var sec = document.createElement("section");
+    sec.className = "season" + (unlocked ? "" : " locked");
+    var cards = topics.map(function(t){
+      var isDone = !!state.done[t.id];
+      var best = state.scores[t.id];
+      return "<button class='topic-card' data-topic='" + t.id + "' " + (unlocked ? "" : "disabled") + ">"
+        + (isDone ? "<span class='done-badge'>✓ Complete</span>" : (unlocked ? "" : "<span class='lock-ic'>🔒</span>"))
+        + "<span class='t-num'>TOPIC " + t.id + " · " + t.lectures.toUpperCase() + "</span>"
+        + "<h4>" + t.title + "</h4><p>" + t.desc + "</p>"
+        + "<span class='t-foot'>"
+        + "<span class='tchip'>" + t.subs.length + " sub-topics</span>"
+        + "<span class='tchip'>" + t.quiz.length + " MCQ quiz</span>"
+        + (best !== undefined ? "<span class='tchip'>Best: " + best + "%</span>" : "")
+        + "<span class='tchip coins'>+30 coins</span>"
+        + "</span></button>";
+    }).join("");
+    var action = "";
+    if (complete) action = "<span class='btn btn-done' style='display:inline-flex'>✓ Season Complete · +100 bonus coins mile</span>";
+    else if (!unlocked) action = "<span class='lock-note'>🔒 Ye season locked hai. Pehle <b>&nbsp;Season " + (s.id - 1) + "&nbsp;</b> ke saare topics complete karo — ya coins se early unlock karo.</span>"
+      + "<button class='btn btn-unlock' data-unlock='" + s.id + "' " + (state.coins >= UNLOCK_COST ? "" : "disabled") + ">Unlock with " + UNLOCK_COST + " coins (wallet: " + state.coins + ")</button>";
+    else action = "<span class='lock-note'>Season khula hai — topics ek-ek karke complete karo. Season pura hone pe <b>&nbsp;+100 bonus coins</b>.</span>";
+    sec.innerHTML = "<div class='season-card'>"
+      + "<div class='season-head-row'><div class='season-badge' style='background:" + s.color + "'>S" + s.id + "</div>"
+      + "<div><h3>" + s.name + "</h3><div class='s-sub'>" + s.sub + "</div>"
+      + "<div class='season-tags'><span class='stag'>" + s.lectures + "</span><span class='stag'>" + s.weight + "</span><span class='stag'>" + topics.length + " topics</span></div></div>"
+      + "<div class='season-side'><div class='pct'>" + pct + "%</div><div class='of'>" + done + " / " + topics.length + " topics done</div></div></div>"
+      + "<div class='season-bar'><i style='width:" + pct + "%;background:" + s.color + "'></i></div>"
+      + "<div class='topics'>" + cards + "</div>"
+      + "<div class='season-actions'>" + action + "</div></div>";
+    root.appendChild(sec);
+  });
+  root.querySelectorAll("[data-topic]").forEach(function(b){
+    b.addEventListener("click", function(){ openTopic(parseInt(b.getAttribute("data-topic"), 10)); });
+  });
+  root.querySelectorAll("[data-unlock]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var sid = parseInt(b.getAttribute("data-unlock"), 10);
+      if (state.coins >= UNLOCK_COST && !state.paidUnlock[sid]) {
+        state.coins -= UNLOCK_COST; state.paidUnlock[sid] = true;
+        saveState();
+        updateHud(); renderSeasons();
+        document.querySelectorAll(".season")[sid - 1].scrollIntoView({behavior:"smooth", block:"start"});
+      }
+    });
+  });
+  // subtle 3D tilt on season cards (desktop pointers only)
+  if (window.matchMedia && window.matchMedia("(pointer:fine)").matches) {
+    root.querySelectorAll(".season-card").forEach(function(card){
+      card.addEventListener("mousemove", function(e){
+        var r = card.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - 0.5) * -2.2;
+        var ry = ((e.clientX - r.left) / r.width - 0.5) * 2.2;
+        card.style.transform = "perspective(1400px) rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)";
+      });
+      card.addEventListener("mouseleave", function(){ card.style.transform = ""; });
+    });
+  }
+}
+
+/* ---------- Lesson view ---------- */
+function openTopic(id){
+  curTopic = topicById(id); curSub = 0;
+  if (!state.seen[id]) state.seen[id] = {};
+  renderLesson();
+  $("lessonSheet").classList.add("open");
+  document.querySelector("#lessonSheet .sheet-panel").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeLesson(){
+  $("lessonSheet").classList.remove("open");
+  document.body.style.overflow = "";
+  updateHud(); renderSeasons();
+}
+function renderLesson(){
+  var t = curTopic;
+  $("ltTitle").textContent = "Topic " + t.id + " · " + t.title;
+  var seenCount = Object.keys(state.seen[t.id]).length;
+  $("ltProg").textContent = seenCount + "/" + t.subs.length + " sub-topics padhe";
+  var tabs = t.subs.map(function(s, i){
+    return "<button class='subtab" + (i === curSub ? " active" : "") + (state.seen[t.id][i] ? " seen" : "") + "' data-sub='" + i + "'>" + (i + 1) + ". " + s.t + "</button>";
+  }).join("");
+  var sub = t.subs[curSub];
+  var practice = t.practice.map(function(p, i){
+    return "<div class='practice-item'><span class='pn'>" + (i + 1) + "</span><p><span class='tag'>" + p.tag + "</span>" + p.q + "</p></div>";
+  }).join("");
+  $("lessonBody").innerHTML =
+    "<div class='lesson-hero'><div class='kicker'>Season " + t.season + " · " + t.lectures + " · ~" + t.mins + " min</div>"
+    + "<h2>" + t.title + "</h2><p>" + t.desc + "</p></div>"
+    + "<div class='subtabs'>" + tabs + "</div>"
+    + "<div class='subbody'><h3>" + sub.t + "</h3>" + sub.body
+    + (sub.code ? "<pre class='code'>" + sub.code.replace(/</g, "&lt;") + "</pre>" : "")
+    + (sub.out ? "<div class='out'><b>OUTPUT</b>" + sub.out.replace(/</g, "&lt;") + "</div>" : "")
+    + "<button class='btn btn-primary mark-seen' id='markSeen'>" + (state.seen[t.id][curSub] ? "✓ Padha hua hai" : "Padh liya — mark karo") + "</button>"
+    + (curSub < t.subs.length - 1 ? " <button class='btn btn-ghost' id='nextSub'>Agla sub-topic →</button>" : "")
+    + "</div>"
+    + "<div class='section-block'><h3>Practice Questions</h3><p>Quiz se pehle ye questions khud likh ke try karo — ST/ETE ka pattern bilkul yahi hai (MCQ + 5/10-marks coding).</p><div class='practice-list'>" + practice + "</div></div>"
+    + (t.bank ? "<div class='section-block'><h3>Question Bank</h3><p>Strings poora hone ke baad ye raha tumhara mega bank — <b>50 important questions</b>.</p><button class='btn btn-primary' id='openBank2'>50 Important Questions kholo</button></div>" : "")
+    + "<div class='section-block'><h3>MCQ Quiz — Topic " + t.id + "</h3><p>" + t.quiz.length + " questions · Pass hone ke liye <b>70%+</b> chahiye · Pass = topic complete + <b>30 coins</b> · Perfect score pe <b>+20 bonus</b></p><div class='quiz-card' id='quizCard'></div></div>";
+  $("lessonBody").querySelectorAll("[data-sub]").forEach(function(b){
+    b.addEventListener("click", function(){ curSub = parseInt(b.getAttribute("data-sub"), 10); renderLesson(); });
+  });
+  $("markSeen").addEventListener("click", function(){
+    state.seen[t.id][curSub] = true;
+    saveState();
+    if (curSub < t.subs.length - 1) curSub++;
+    renderLesson();
+  });
+  var ns = $("nextSub");
+  if (ns) ns.addEventListener("click", function(){ state.seen[t.id][curSub] = true; saveState(); curSub++; renderLesson(); });
+  var ob = $("openBank2");
+  if (ob) ob.addEventListener("click", openBank);
+  startQuiz();
+}
+
+/* ---------- Quiz engine ---------- */
+function startQuiz(){
+  quizIdx = 0; quizScore = 0; quizAnswered = false;
+  renderQuizQ();
+}
+function renderQuizQ(){
+  var t = curTopic, box = $("quizCard");
+  if (!box) return;
+  if (quizIdx >= t.quiz.length) { renderQuizResult(); return; }
+  var q = t.quiz[quizIdx];
+  var opts = q.o.map(function(o, i){
+    return "<button class='opt' data-opt='" + i + "'>" + String.fromCharCode(65 + i) + ". " + o.replace(/</g, "&lt;") + "</button>";
+  }).join("");
+  box.innerHTML = "<div class='quiz-meta'><span>Question " + (quizIdx + 1) + " / " + t.quiz.length + "</span><span>Score: " + quizScore + "</span></div>"
+    + "<div class='bar' style='margin:0 0 14px'><i style='width:" + Math.round(quizIdx / t.quiz.length * 100) + "%'></i></div>"
+    + "<p class='quiz-q'>" + q.q.replace(/</g, "&lt;") + "</p>"
+    + "<div class='opts'>" + opts + "</div>"
+    + "<div class='explain' id='qExplain'><b>Samajh:</b> " + q.e + "</div>"
+    + "<div class='quiz-nav'><button class='btn btn-primary' id='qNext' style='display:none'>" + (quizIdx === t.quiz.length - 1 ? "Result dekho →" : "Agla question →") + "</button></div>";
+  quizAnswered = false;
+  box.querySelectorAll("[data-opt]").forEach(function(b){
+    b.addEventListener("click", function(){
+      if (quizAnswered) return;
+      quizAnswered = true;
+      var pick = parseInt(b.getAttribute("data-opt"), 10);
+      box.querySelectorAll(".opt").forEach(function(o2, i){
+        o2.disabled = true;
+        if (i === q.a) o2.classList.add("right");
+        else if (i === pick) o2.classList.add("wrong");
+      });
+      if (pick === q.a) quizScore++;
+      $("qExplain").classList.add("show");
+      $("qNext").style.display = "inline-flex";
+    });
+  });
+  $("qNext").addEventListener("click", function(){ quizIdx++; renderQuizQ(); });
+}
+function renderQuizResult(){
+  var t = curTopic, box = $("quizCard");
+  var pct = Math.round(quizScore / t.quiz.length * 100);
+  var passed = pct >= 70;
+  var perfect = quizScore === t.quiz.length;
+  var rewardMsg = "";
+  if (passed && !state.done[t.id]) {
+    state.done[t.id] = true;
+    state.coins += TOPIC_COINS;
+    rewardMsg = "+" + TOPIC_COINS + " coins mile — topic complete!";
+    if (perfect) { state.coins += PERFECT_BONUS; rewardMsg += " Perfect score pe +" + PERFECT_BONUS + " bonus coins bhi!"; }
+    if (seasonComplete(t.season) && !state.seasonBonusGiven[t.season]) {
+      state.seasonBonusGiven[t.season] = true;
+      state.coins += SEASON_BONUS;
+      rewardMsg += " Season " + t.season + " pura complete — +" + SEASON_BONUS + " bonus coins! Agla season unlock ho gaya.";
+    }
+  } else if (passed) {
+    rewardMsg = "Topic pehle se complete hai — dobara practice ke liye badhiya score!";
+    if (perfect && state.scores[t.id] !== 100) { /* no double farming */ }
+  }
+  if (state.scores[t.id] === undefined || pct > state.scores[t.id]) state.scores[t.id] = pct;
+  saveState();
+  box.innerHTML = "<div class='quiz-result'><div class='score-big'>" + pct + "%</div>"
+    + "<p><b>" + quizScore + " / " + t.quiz.length + "</b> sahi jawab.<br>"
+    + (passed ? "Badhiya! 70% ki line paar kar li — topic complete mark ho gaya." : "70% se kam raha — sub-topics ek baar aur padh ke dobara try karo, ho jayega.")
+    + "</p>"
+    + (rewardMsg ? "<div class='reward-toast show'>🪙 " + rewardMsg + "</div>" : "")
+    + "<div class='quiz-nav' style='justify-content:center'><button class='btn btn-ghost' id='qRetry'>Quiz dobara do</button>"
+    + "<button class='btn btn-primary' id='qBack'>Seasons pe wapas</button></div></div>";
+  $("qRetry").addEventListener("click", startQuiz);
+  $("qBack").addEventListener("click", closeLesson);
+  updateHud();
+}
+
+/* ---------- Question bank ---------- */
+function openBank(){
+  var list = $("bankList");
+  if (!list.dataset.done) {
+    list.innerHTML = STR_BANK.map(function(q, i){
+      return "<div class='bank-item'><b>Q" + (i + 1) + ".</b> " + q + "</div>";
+    }).join("");
+    list.dataset.done = "1";
+  }
+  $("bankSheet").classList.add("open");
+  document.querySelector("#bankSheet .sheet-panel").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeBank(){
+  $("bankSheet").classList.remove("open");
+  if (!$("lessonSheet").classList.contains("open")) document.body.style.overflow = "";
+}
+
+/* ---------- Wire up ---------- */
+$("closeLesson").addEventListener("click", closeLesson);
+$("sheetBg").addEventListener("click", closeLesson);
+$("closeBank").addEventListener("click", closeBank);
+$("bankBg").addEventListener("click", closeBank);
+$("bankBtn").addEventListener("click", openBank);
+$("continueBtn").addEventListener("click", function(){
+  var next = TOPICS.filter(function(t){ return !state.done[t.id] && isSeasonUnlocked(t.season); })[0];
+  if (next) openTopic(next.id);
+  else document.querySelectorAll(".season")[0].scrollIntoView({behavior:"smooth"});
+});
+document.addEventListener("keydown", function(e){
+  if (e.key === "Escape") { closeBank(); if ($("lessonSheet").classList.contains("open")) closeLesson(); }
+});
+loadState();
+refreshStreak();
+saveState();
+updateHud();
+renderSeasons();
+</script>
+</body>
+</html>
