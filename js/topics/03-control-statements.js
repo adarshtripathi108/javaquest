@@ -1,0 +1,31 @@
+/* JavaQuest — Topic 3: Control Statements (Season 1) */
+TOPICS.push(
+{
+ id:3, season:1, title:"Control Statements", lectures:"Lectures 13–21", mins:55,
+ desc:"Decision constructs (if, switch), loops (for, while, do-while), command line arguments — aur grades, bills, patterns wale practice programs.",
+ subs:[
+  {t:"Decision Constructs — if & switch", body:"<p><b>if-else</b> condition ke basis pe raasta chun-ta hai. Ladder aur nested dono forms aate hain exam me. <b>switch</b> ek hi variable ki kai values check karne ke liye saaf tareeka hai — Java me switch int, char, String aur enum pe kaam karta hai.</p><div class='callout warn'><b>break bhoolna = fall-through:</b> switch me break na lagao to neeche wale cases bhi chal jayenge. default case koi bhi match na hone pe chalta hai.</div>", code:"public class Grade {\n    public static void main(String[] args) {\n        int marks = 86;\n        if (marks >= 90) System.out.println(\"Grade A+\");\n        else if (marks >= 75) System.out.println(\"Grade A\");\n        else if (marks >= 60) System.out.println(\"Grade B\");\n        else System.out.println(\"Improve karo\");\n    }\n}", out:"Grade A"},
+  {t:"Loop Constructs — for, while, do-while", body:"<table class='cmp'><tr><th>Loop</th><th>Kab use karein</th><th>Check point</th></tr><tr><td>for</td><td>Iterations ki ginti pehle se pata ho</td><td>Entry-controlled</td></tr><tr><td>while</td><td>Condition pe based, ginti fix nahi</td><td>Entry-controlled</td></tr><tr><td>do-while</td><td>Kam se kam ek baar chalana hi hai (menu programs)</td><td>Exit-controlled — pehle body, phir check</td></tr></table><p><b>break</b> loop ko turant todta hai, <b>continue</b> sirf current iteration skip karta hai. Infinite loop se bachne ke liye loop variable update karna mat bhoolna.</p>", code:"public class Table {\n    public static void main(String[] args) {\n        int n = 5;\n        for (int i = 1; i <= 3; i++) {\n            System.out.println(n + \" x \" + i + \" = \" + (n * i));\n        }\n        int j = 3;\n        do { System.out.println(\"do-while chala: \" + j); j++; } while (j < 3);\n    }\n}", out:"5 x 1 = 5\n5 x 2 = 10\n5 x 3 = 15\ndo-while chala: 3"},
+  {t:"Command Line Arguments", body:"<p>Program ko run karte time values dena hi <b>command line arguments</b> hai. Ye <code>main</code> ke <code>String[] args</code> me aate hain — hamesha <b>String</b> form me, isliye number chahiye to <code>Integer.parseInt()</code> se convert karna padta hai.</p><p>CHO practice (Lectures 24–32) me command-line se input leke arithmetic aur string operations karne wale programs aate hain.</p>", code:"public class CmdArgs {\n    public static void main(String[] args) {\n        // Run: java CmdArgs 10 20\n        int a = Integer.parseInt(args[0]);\n        int b = Integer.parseInt(args[1]);\n        System.out.println(\"Sum = \" + (a + b));\n    }\n}", out:"Sum = 30"},
+  {t:"Practice Patterns — Factorial, Fibonacci, Patterns", body:"<p>Lectures 16–21 ki practice list exam me coding questions bank hai: <b>grades calculate karna, electricity bill, menu-driven calculator, multiplication table, factorial, Fibonacci series, aur pattern printing</b> (triangle, pyramid, hollow shapes). Pattern questions me hamesha outer loop = rows, inner loop = columns/spaces — ye structure yaad kar lo, har pattern isi se banta hai.</p>", code:"public class Pattern {\n    public static void main(String[] args) {\n        for (int i = 1; i <= 4; i++) {          // rows\n            for (int j = 1; j <= i; j++) {      // stars\n                System.out.print(\"* \");\n            }\n            System.out.println();\n        }\n    }\n}", out:"* \n* * \n* * * \n* * * * "}
+ ],
+ practice:[
+  {tag:"Coding · 10 marks", q:"Menu-driven calculator banao: switch se +, −, *, / choose ho, do-while se user ke 'exit' kehne tak menu dobara aaye."},
+  {tag:"Coding · 5 marks", q:"Electricity bill calculate karo: pehli 100 units ₹5/unit, agli 100 ₹7/unit, uske upar ₹10/unit (if-else ladder se)."},
+  {tag:"Coding · 5 marks", q:"Factorial aur Fibonacci series (pehle 10 terms) — dono ek hi program me alag methods se print karo."},
+  {tag:"Coding · 5 marks", q:"Command line arguments se 2 numbers leke unka sum, difference aur product print karo."},
+  {tag:"Coding · 5 marks", q:"Pyramid pattern print karo (5 rows) — spaces aur stars dono ke inner loops ke saath."},
+  {tag:"Theory · 2 marks", q:"do-while ko exit-controlled loop kyun kehte hain? while se ek farak example ke saath likho."}
+ ],
+ quiz:[
+  {q:"Kaunsa loop kam se kam ek baar zaroor chalta hai, condition false ho tab bhi?", o:["for","while","do-while","Teeno"], a:2, e:"do-while pehle body chalata hai, condition baad me check karta hai — isliye ek baar to chalega hi."},
+  {q:"switch me break na lagane se kya hota hai?", o:["Compile error","Fall-through — neeche ke cases bhi chal jate hain","Program crash","Kuch nahi hota"], a:1, e:"break ke bina execution neeche wale cases me gir jata hai — ise fall-through kehte hain."},
+  {q:"Command line arguments main() me kis type me milte hain?", o:["int[]","String[]","char[]","Object[]"], a:1, e:"Hamesha String[] args me. Number chahiye to parseInt se convert karo."},
+  {q:"continue statement kya karta hai?", o:["Loop khatam kar deta hai","Method se bahar nikalta hai","Current iteration skip karke next pe jata hai","Program band kar deta hai"], a:2, e:"continue sirf us iteration ka baaki hissa skip karta hai; break poora loop tod deta hai."},
+  {q:"for (int i = 0; i < 3; i++) loop kitni baar chalega?", o:["2","3","4","Infinite"], a:1, e:"i = 0, 1, 2 — kul 3 baar."},
+  {q:"switch kis type pe NAHI chal sakta (traditional switch)?", o:["int","char","String","double"], a:3, e:"Traditional switch double/float/long/boolean pe nahi chalta. int, char, String, enum pe chalta hai."},
+  {q:"Fibonacci series ki pehli do values aam taur pe kya li jati hain?", o:["1, 2","0, 1","1, 3","0, 2"], a:1, e:"0, 1 se shuru: 0, 1, 1, 2, 3, 5, 8... har term pichli do ka sum."},
+  {q:"while (false) { ... } ka result?", o:["Ek baar chalega","Compile-time error — unreachable code","Infinite loop","Chalega jab tak memory hai"], a:1, e:"Condition hamesha false hai to body unreachable hai — Java compiler error deta hai."}
+ ]
+}
+);
