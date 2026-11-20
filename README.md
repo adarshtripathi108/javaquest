@@ -24,12 +24,12 @@ are saved separately.
   Robust & Concurrent, Data / IO / Database
 - Every topic: beginner-friendly sub-lessons (73 in total) → worked examples
   with output and **line-by-line explanations (720 in total)** → practice
-  questions (96) → end-of-topic TEST with click-to-reveal answers
+  questions (80, coding only — every question has a click-to-reveal Ans button) → end-of-topic TEST with click-to-reveal answers
 - **Practice page** — 186 LeetCode-style problems with category/difficulty
   filters, examples, constraints, starter code and hidden solutions
 - **Coins & streak** — +50 coins per completed topic, +10 per solved problem;
   daily streak, all saved in the browser (localStorage)
-- **Strings bank** — 50 important questions for the Strings topic
+- **Strings bank** — 38 coding questions for the Strings topic, each with a click-to-reveal answer
 - Search, track filters and season stops; works on desktop & mobile
 
 ## How to use
