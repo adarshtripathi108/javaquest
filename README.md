@@ -13,8 +13,10 @@ The current design is inspired by
 [learnwithzero.com](https://learnwithzero.com/): a white hero with a faded
 isometric "Java World" city, an always-visible bottom dock with a Start pill,
 and a black section on scroll with a "720" count-up, floating interview
-topics and track tabs (Core Java / OOP / DSA / Spring / Android). No bike
-system — the earlier bike-based versions are saved separately.
+topics and season stops. The home page has no topic cards — topics open only
+when Start is clicked (dock or final Start button), which opens the Topics
+view with all 16 topics. No bike system — the earlier bike-based versions
+are saved separately.
 
 ## What's inside
 
