@@ -598,7 +598,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
   <div class="topbar-in">
     <a class="logo" href="#top" id="logoHome"><span class="code-mark">{<i>;</i>}</span><span>JavaQuest</span></a>
     <nav class="top-links">
-      <a href="#tracks" id="navTracks">Tracks</a>
       <a href="#topics" id="navTopics">Topics</a>
       <a href="#practice" id="navPractice">Practice</a>
       <a href="#about" id="navAbout">About</a>
@@ -641,22 +640,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
     </div>
     <p class="space-cap"><strong>Ye topics interviews me baar-baar aate hain.</strong> Inki taiyaari — yahin, ek hi jagah, topic by topic.</p>
 
-    <!-- TRACKS — Zero roles style -->
-    <section class="tracks" id="tracks">
-      <div class="wrap">
-        <h2>Hum tumhe <span class="grad-text">sabse hot Java tracks</span> ke liye taiyaar karte hain.</h2>
-        <div class="tabs" role="group" aria-label="Filter topics by track">
-          <button class="tab-btn filter-btn active" data-filter="all" type="button">All Tracks</button>
-          <button class="tab-btn filter-btn" data-filter="core" type="button">Core Java</button>
-          <button class="tab-btn filter-btn" data-filter="oop" type="button">OOP</button>
-          <button class="tab-btn filter-btn" data-filter="dsa" type="button">DSA</button>
-          <button class="tab-btn filter-btn" data-filter="spring" type="button">Spring</button>
-          <button class="tab-btn filter-btn" data-filter="android" type="button">Android</button>
-        </div>
-        <p class="filter-note" id="filterNote"></p>
-        <div class="dark-cards" id="frontCards"></div>
-      </div>
-    </section>
   </div>
 
   <!-- WHITE — Learn by doing -->
@@ -792,7 +775,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
           <div class="fs"><b data-count="90">90</b><span>Lectures</span></div>
           <div class="fs"><b data-count="5">5</b><span>Seasons</span></div>
         </div>
-        <button class="start-white" type="button" id="finalStart">Start — Topic 1 kholo</button>
+        <button class="start-white" type="button" id="finalStart">Start — Topics kholo</button>
       </div>
     </div>
   </section>
@@ -907,7 +890,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 
 <div class="dock-pop" id="menuPop" role="menu" aria-label="Site menu">
   <button class="pop-row" type="button" data-goto="home"><span class="pop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></span>Home</button>
-  <button class="pop-row" type="button" data-goto="tracks"><span class="pop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>Tracks</button>
   <button class="pop-row" type="button" data-goto="topics"><span class="pop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></span>Topics</button>
   <button class="pop-row" type="button" data-goto="practice"><span class="pop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 6-6 6 6 6M16 6l6 6-6 6"/></svg></span>Practice</button>
   <button class="pop-row" type="button" data-goto="seasons"><span class="pop-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>Seasons</button>
@@ -1284,15 +1266,12 @@ function scrollToId(id){
   if (el) el.scrollIntoView({behavior: reduced? "auto":"smooth"});
 }
 function startLearning(){
-  closePops();
-  var next=null;
-  TOPICS.forEach(function(t){ if(!next && !doneTopics.has(t.id)) next=t; });
-  openLesson(next? next.id : 1);
+  closeAllViews();
+  openPageView(topicsView);
 }
 document.getElementById("dockStart").addEventListener("click",startLearning);
 document.getElementById("navTopics").addEventListener("click",function(e){ e.preventDefault(); closeAllViews(); openPageView(topicsView); });
 document.getElementById("navPractice").addEventListener("click",function(e){ e.preventDefault(); closeAllViews(); openPageView(practiceView); });
-document.getElementById("navTracks").addEventListener("click",function(e){ e.preventDefault(); scrollToId("tracks"); });
 document.getElementById("navAbout").addEventListener("click",function(e){ e.preventDefault(); scrollToId("about"); });
 document.getElementById("logoHome").addEventListener("click",function(e){ e.preventDefault(); closeAllViews(); window.scrollTo({top:0,behavior: reduced? "auto":"smooth"}); });
 document.getElementById("topicsBack").addEventListener("click",function(){ closePageView(topicsView); });
