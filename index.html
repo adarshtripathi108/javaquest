@@ -1453,16 +1453,16 @@ function openLesson(id){
       MISTAKES[t.id].map(function(m){ return "<li>"+esc(m)+"</li>"; }).join("")+'</ul></div>';
   }
   if (t.practice && t.practice.length){
-    html+='<div class="sec-block"><h2>Practice Questions — pehle khud try karo</h2><p>Ye sawal pehle bina dekhe khud likho. Atak jao to upar ke worked examples ki line-by-line explanation dobara dekho — har practice ka tareeka kisi na kisi example me chhupa hai.</p>';
+    html+='<div class="sec-block"><h2>Practice Questions — pehle khud try karo</h2><p>Ye sawal pehle bina dekhe khud likho. Atak jao to upar ke worked examples ki line-by-line explanation dobara dekho — har practice ka tareeka kisi na kisi example me chhupa hai. Phir bhi atak jao to <b>Ans</b> dabao — poora solution dikh jayega.</p>';
     t.practice.forEach(function(p,i){
-      html+='<div class="practice-card"><span class="p-tag">'+esc(p.tag||"Practice")+'</span><p><b>Q'+(i+1)+'.</b> '+esc(p.q)+'</p></div>';
+      html+='<div class="practice-card"><span class="p-tag">'+esc(p.tag||"Practice")+'</span><p><b>Q'+(i+1)+'.</b> '+esc(p.q)+'</p>'+(p.a?'<button class="ans-btn" type="button" data-lbl="Ans">Ans</button><div class="ans-block"><pre style="white-space:pre-wrap;word-break:break-word;margin:0;font-size:13.5px">'+esc(p.a)+'</pre></div>':"")+'</div>';
     });
     html+='</div>';
   }
   if (t.bank && typeof STR_BANK!=="undefined"){
-    html+='<div class="sec-block"><h2>Strings Question Bank — 50 Important Questions</h2><p>Revision ke liye poori list — ek-ek karke notebook me solve karo.</p>';
+    html+='<div class="sec-block"><h2>Strings Question Bank — '+STR_BANK.length+' Important Questions</h2><p>Revision ke liye poori list — ek-ek karke notebook me solve karo. Atak jao to <b>Ans</b> dabao.</p>';
     STR_BANK.forEach(function(q,i){
-      html+='<div class="practice-card"><span class="p-tag">Bank · Q'+(i+1)+'</span><p>'+esc(q)+'</p></div>';
+      html+='<div class="practice-card"><span class="p-tag">Bank · Q'+(i+1)+'</span><p>'+esc(q.q)+'</p>'+(q.a?'<button class="ans-btn" type="button" data-lbl="Ans">Ans</button><div class="ans-block"><pre style="white-space:pre-wrap;word-break:break-word;margin:0;font-size:13.5px">'+esc(q.a)+'</pre></div>':"")+'</div>';
     });
     html+='</div>';
   }
@@ -1488,7 +1488,7 @@ function openLesson(id){
     btn.addEventListener("click",function(){
       var block=btn.parentElement.querySelector(".ans-block");
       var open=block.classList.toggle("show");
-      btn.textContent = open? "Answer chhupao" : "Answer dekho";
+      btn.textContent = open? "Answer chhupao" : (btn.getAttribute("data-lbl")||"Answer dekho");
     });
   });
   bindCopyButtons(body);
